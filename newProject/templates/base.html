@@ -41,7 +41,7 @@
                             Inicio</a>
                     </div>
                     <div class="col">
-                        <a class="text-decoration-none" href="Contacto.html" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                        <a class="text-decoration-none" href="{% url 'Contacto' %}" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
                             Contacto</a>
                     </div>
                     <div class="col">
@@ -65,7 +65,7 @@
                 <div class="foot_info">
                     <ul>
                         <li>Nosotros</li>
-                        <li><a href="Contacto.html" style="text-decoration:none;color:white">Contacto</a></li>
+                        <li><a href="{% url 'Contacto' %}" style="text-decoration:none;color:white">Contacto</a></li>
                         <li>Envios</li>
                         <li>Ayuda</li>
                         <li><img src="{% static 'img/ig_logo.png' %}" alt="ig" style="width:20px; float:left;margin-top:4px;margin-right:6px;">Instagram</li>

@@ -17,3 +17,9 @@ def fleetwood_mac(request):
 def supertramp_cotc(request):
     context={}
     return render(request,'supertramp_cotc.html',context)
+def Carrito(request):
+    context={}
+    return render(request,'Carrito.html',context)
+def Contacto(request):
+    context={}
+    return render(request,'Contacto.html',context)

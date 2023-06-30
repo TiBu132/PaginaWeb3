@@ -1,0 +1,34 @@
+{%extends './base.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Vinilos</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+{% block body%}
+<body style="background-color: bisque;">
+
+    <!-- Contacto -->
+
+    <div class="contacto">
+        <p>Puedes contactarnos a través de nuestros correos electrónicos: jfbadilla.mo@hotmail.com y eesveile@gmail.com</p>
+        <p><img src="{% static 'img/ig_black' %}" alt="ig" style="width:20px; float:left;margin-top:4px;margin-right:6px;">Instagram</p>
+        <p><img src="{% static 'img/fb_black' %}" alt="fb" style="width:25px; float:left;margin-top:2px;margin-right:3px;">Facebook</p>
+        <p>Santiago - Chile</p>
+    </div>
+
+      {% endblock%}
+</body>
+</html>
+
+
+
+

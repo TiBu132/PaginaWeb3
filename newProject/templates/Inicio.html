@@ -26,10 +26,10 @@
     <!-- Inicio de sesión ; Carrito de Compras -->
 
     <div>
-        <a href="Inicio_sesion.html"> <img src="{% static 'img/usuario.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
-        <a href="Carrito.html"><img src="{% static 'img/carrito.png' %}" alt="carrito" style="width:55px;float:right;margin:10px 2%" width="40px"></a>
+        <a href="{% url 'Inicio' %}"> <img src="{% static 'img/usuario.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
+        <a href="{% url 'Carrito' %}"><img src="{% static 'img/carrito.png' %}" alt="carrito" style="width:55px;float:right;margin:10px 2%" width="40px"></a>
         <div class="position-absolute">
-            <a href="Carrito.html"><img src="img/carrito.png" alt="carrito" class="position-absolute top-0 end-0" width="40px"></a>
+            <a href="{% url 'Carrito' %}"><img src="{% static 'img/carrito.png' %}" alt="carrito" class="position-absolute top-0 end-0" width="40px"></a>
         </div>
     </div>    
 
@@ -164,11 +164,3 @@
         {% endblock%}
 </body>
 </html>
-
-
-
-
-
-
-
-

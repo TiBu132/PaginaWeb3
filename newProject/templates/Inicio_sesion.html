@@ -1,0 +1,51 @@
+{%extends './base.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Vinilos</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+{% block body%}
+<body style="background-color:bisque">
+
+    <style>
+        .form-login {
+            background-image: url('{% static "img/otrovin.jpg" %}');
+            background-size: cover;
+        }
+    </style>
+
+
+    <!-- Login -->
+
+    <br>
+
+    <div class="login">
+        <div class="borderlan">
+            <section class="form-login">
+                <h5>Iniciar Sesion</h5>
+                <label for="usuario">Usuario:</label><br>
+                <input class="controls" type="text" name="usuario" id="usuario" autocomplete="on" placeholder="Usuario"><br><br>
+                <label for="contrasena">Contraseña:</label><br>
+                <input class="controls" type="password" name="contrasena" id="contrasena" autocomplete="on" placeholder="Contraseña"><br><br>
+                <input class="buttons" type="submit" value="Ingresar">
+                <p><a href="registrarse.html">¿No tienes cuenta?, Registrate</a></p>
+                <p><a href="#">¿Olvidaste tu Contraseña?</a></p> 
+                <hr style="color:white">
+            </section>
+        </div>
+    </div> <br> <br> <br>
+
+   {% endblock%}
+</body>
+</html>
+
+
