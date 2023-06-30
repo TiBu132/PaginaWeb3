@@ -25,7 +25,11 @@ def Carrito(request):
 def Contacto(request):
     context={}
     return render(request,'Contacto.html',context)
-
-def Inicio_sesion(request):
+def inicio_sesion(request):
     context={}
-    return render(request,'Inicio_sesion.html',context)
+    return render(request,'inicio_sesion.html',context)
+
+def Registrarse(request):
+    context={}
+    return render(request,'Registrarse.html',context)
+
