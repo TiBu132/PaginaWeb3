@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Usuario, tipoUsuario
 # Create your views here.
 
 def base(request):
@@ -7,7 +7,9 @@ def base(request):
     return render(request,'base.html',context)
 
 def inicio(request):
-    context={}
+    usuarios = Usuario.objects.raw('SELECT * FROM Usuario')
+    print(usuarios)
+    context={"usuarios":usuarios}
     return render(request,'Inicio.html',context)
 
 def fleetwood_mac(request):
@@ -23,3 +25,7 @@ def Carrito(request):
 def Contacto(request):
     context={}
     return render(request,'Contacto.html',context)
+
+def Inicio_sesion(request):
+    context={}
+    return render(request,'Inicio_sesion.html',context)

@@ -9,7 +9,6 @@ urlpatterns = [
     path('Supertramp-Crime-Of-The-Century',views.supertramp_cotc,name = 'supertramp'),
     path('Carrito',views.Carrito, name = 'Carrito'),
     path('Contacto',views.Contacto, name = 'Contacto'),
-    path('Inicio_sesion',views.inicio_sesion, name = 'Inicio_sesion')
-    
+    path('Inicio_sesion',views.Inicio_sesion, name = 'Inicio_sesion'),
 
 ]
