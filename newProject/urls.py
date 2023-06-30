@@ -10,5 +10,9 @@ urlpatterns = [
     path('Carrito',views.Carrito, name = 'Carrito'),
     path('Contacto',views.Contacto, name = 'Contacto'),
     path('Inicio_sesion',views.Inicio_sesion, name = 'Inicio_sesion'),
-
+    path("userAdd", views.userAdd, name="userAdd"),
+    path("userDel/ <str:pk>", views.userDel, name="userDel"),
+    path("userEdit/ <str:pk>", views.userEdit, name="userEdit"),
+    path('crud', views.crud, name='crud'),
+    path("addForm", views.addForm, name="addForm"),
 ]
