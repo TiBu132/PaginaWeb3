@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Vinilos</title>
+    <link rel='stylesheet' href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+    <!-- Header --> 
+    <style type="header">
+        .bg-header {
+        background-image: url('{% static "img/viniles2.png" %}');
+        height: 175px;
+        background-repeat:no-repeat;
+        background-size:cover;
+        margin-bottom:3%;
+        }
+    </style>
+    <header>
+        <div class="p-5 text-center bg-image bgheader">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h1 class="mb-3">Tienda de Vinilos</h1>
+                <hr>
+                <h4 class="mb-3">Discos Usados</h4>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a class="text-decoration-none" href="Inicio.html" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                        Inicio</a>
+                </div>
+                <div class="col">
+                    <a class="text-decoration-none" href="Contacto.html" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                        Contacto</a>
+                </div>
+                <div class="col">
+                    <a class="text-decoration-none" href="#" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                        Envios</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    {% block body%}
+
+    {% endblock%}
+
+    <!-- Footer -->
+
+    <footer>
+            <div class="foot">
+                <div class="foot_info">
+                    <ul>
+                        <li>Nosotros</li>
+                        <li><a href="Contacto.html" style="text-decoration:none;color:white">Contacto</a></li>
+                        <li>Envios</li>
+                        <li>Ayuda</li>
+                        <li><img src="{% static 'img/ig_logo.png' %}" alt="ig" style="width:20px; float:left;margin-top:4px;margin-right:6px;">Instagram</li>
+                        <li><img src="{% static 'img/fb_logo.png' %}" style="width:25px; float:left;margin-top:2px;margin-right:3px;">Facebook</li>
+                    </ul>
+                </div>
+                <div class="foot_rights">
+                    <img src="{% static 'img/fb_logo.png' %}" style="float:left;width:auto;padding-top:0.75%;">
+                    <p>© 2023 Tienda de Vinilos®</p>
+                    <p>Política de cookies</p>
+                    <p>Condiciones del servicio</p>
+                    <p>Política de privacidad</p>
+                </div>
+                <h1>hola</h1>
+            </div>
+
+        </footer>
+
+</body>
+</html>

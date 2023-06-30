@@ -1,0 +1,166 @@
+{%extends './base.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Vinilos</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+{% block body%}
+<body style="background-color:bisque">
+    
+
+    <!-- Search -->
+
+    <div style="margin:2% 40%;">
+        <input class="form-control" type="text" name="Buscar" placeholder="Busca Artistas o Álbumes " aria-label="Search">
+    </div>
+    
+    <!-- Inicio de sesión ; Carrito de Compras -->
+
+    <div>
+        <a href="Inicio_sesion.html"> <img src="{% static 'img/usuario1.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
+        <a href="Carrito.html"><img src="{% static 'img/carrito.png' %}" alt="carrito" style="width:55px;float:right;margin:10px 2%" width="40px"></a>
+        <div class="position-absolute">
+            <a href="Carrito.html"><img src="img/carrito.png" alt="carrito" class="position-absolute top-0 end-0" width="40px"></a>
+        </div>
+    </div>    
+
+    <!-- Contenido Vinilos -->
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-12">
+                    <a href="fleetwood_mac.html" class="text-decoration-none">
+                        <div class="text-center">
+                            <figure>
+                                <img class="center-block" src="{% static 'img/Portada/fleetwoodmac.jpg' %}" alt="fleetwoodmac" width="20%">
+                            </figure>
+                        </div>
+                        <div class="text-center">
+                            <div class="info_discos">
+                                <h2>Fleetwood Mac</h2>
+                                <p>Rumours</p>
+                                <p class="precio">$15.000</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>    
+                <div class="col-sm-4 col-12">
+                    <a href="supertramp_cotc.html" class="text-decoration-none">
+                        <div class="text-center">
+                        <figure>
+                            <img src="img/portada/supertramp_crime.jpg" alt="supertramp" width="20%" >
+                        </figure>
+                        </div>
+                        <div class="info_discos">
+                            <h2>SuperTramp</h2>
+                            <p>Crime of the Century</p>
+                            <p class="precio">$15.000</p>
+                        </div>
+                    </a>    
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                    <figure>
+                        <img src="img/portada/otto_live.jpg" class="text-decoration-none" alt="otto" width="20%">
+                    </figure>
+                    </div>
+                    <div class="info_discos">
+                        <h2>Otto</h2>
+                        <p>Live in Audimax</p>
+                        <p class="precio">$15.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                        <figure>
+                            <img src="img/portada/triumvirat_spartacus.jpg" class="text-decoration-none" alt="otto" width="20%">
+                        </figure>
+                    </div>
+                    <div class="info_discos">
+                        <h2>Triunvirat</h2>
+                        <p>Spartacus</p>
+                        <p class="precio">$15.000</p>
+                    </div>
+                </div> 
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                        <figure>
+                            <img src="img/portada/war_galaxy.jpg" class="text-decoration-none" alt="otto" width="20%">
+                        </figure>
+                    </div>
+                    <div class="info_discos">
+                        <h2>War</h2>
+                        <p>Galaxy</p>
+                        <p class="precio">$10.000</p>
+                    </div>
+                </div> 
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                        <figure>
+                            <img src="img/portada/funkadelic_ujwy.jpg" class="text-decoration-none" alt="funkadelic" width="20%">
+                        </figure>
+                    </div>
+                    <div class="info_discos">
+                        <h2>Funkadelic</h2>
+                        <p>Uncle Jam Wants You</p>
+                        <p class="precio">$15.000</p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                        <figure>
+                            <img src="img/portada/parliament_pfet.jpeg" class="text-decoration-none" alt="parliament" width="20%">
+                        </figure>
+                    </div>
+                    <div class="info_discos">
+                        <h2>Parliament</h2>
+                        <p>P. Funk Earth Tour</p>
+                        <p class="precio">$20.000</p>
+                    </div>
+                </div> 
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                        <figure>
+                            <img src="img/Portada/hair.osr.jpg" class="text-decoration-none" alt="hair" width="20%">
+                        </figure>    
+                    </div>
+                    <div class="info_discos">
+                        <h2>Hair</h2>
+                        <p>Original Soundtrack Recording</p>
+                        <p class="precio">$10.000</p>
+                    </div>
+                </div> 
+                <div class="col-sm-4 col-12">
+                    <div class="text-center">
+                        <figure>
+                            <img src="img/Portada/janhammer_oyeah.jpg" class="text-decoration-none" alt="jan_hammer" width="20%">
+                        </figure>
+                    </div>
+                    <div class="info_discos">
+                        <h2>Jan Hammer</h2>
+                        <p>Oh, Yeah?</p>
+                        <p class="precio">$10.000</p>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+        <br> <br>
+
+        {% endblock%}
+</body>
+</html>

@@ -1,0 +1,299 @@
+body{
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+
+/* Footer */
+
+.foot {
+    height: auto;
+    background-color:rgb(66, 66, 66);
+    padding: 0px;
+    font-family:arial;
+    color:white;
+}
+
+.foot_info{
+    display:flex;
+    font-size:20px;
+    padding: 20px 20%;  
+    height: auto;
+}
+
+.foot_info li:hover{
+    text-decoration: underline;
+}
+
+.foot_rights{
+    width:auto;
+    height:75px;
+    background-color:rgb(34, 34, 34);
+    padding: 0px 20%;
+    display:flex;
+}
+
+.foot_rights p{
+    padding:1% 50px;
+}
+
+.foot_rights p:hover{
+    text-decoration: underline;
+}
+/* Containers */
+
+.container {
+    gap: 20px;
+}
+
+.container img{
+    width: 300px;
+    height:300px;
+    object-fit: cover;
+    margin:auto;
+    border:2px black solid;
+    border-radius: 2px;
+    transition: all .5s;
+}
+
+.row{
+    margin: 5% 0px;
+}
+
+.col-3{
+    width: auto;
+    height: auto;
+    margin:0px 2%;
+}
+
+.col-3:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.col-3:hover img{
+    transform: scale(0.95);
+}
+
+
+.container_discos:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.container_discos:hover img{
+    transform: scale(0.95);
+}
+
+.info_discos{
+    padding: 0px 20px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    color:black;
+}
+
+.info_discos h2{
+    text-align:center;
+    font-size:30px;
+}
+
+.info_discos p{
+    text-align:center;
+    font-size:20px;
+}
+
+.precio{
+    text-align:center;
+    font-size:20px;
+    margin-top:5px;
+}
+
+/* Vinilos */
+
+.vinilos {
+    padding:0px 5%;
+}
+
+.vinilos img {
+    width: 35%;
+    height: 35%;
+    float:left;
+    margin-right:100px;
+    border:2px black solid;
+}
+
+.vinilos h1{
+    font-size:50px;
+    font-weight: bolder;
+}
+
+.vinilos p{
+    font-size:25px;
+    font-weight:lighter;
+}
+
+.vinilos button{
+    font-family:sans-serif;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.vinilos_desc {
+    width: 12%;
+    margin-left: 42%;
+}
+
+/* Botones */
+
+.boton_carrito {
+    border-radius:5px;
+    background-color: white;
+    color: black;
+    cursor:pointer;
+    padding: 15px 10px;
+    width: 15%;
+}
+
+.boton_comprar{
+    border-radius:5px;
+    background-color:cornflowerblue;
+    color: black;
+    cursor:pointer;
+    padding: 15px 10px;
+    width: 15%;
+
+}
+
+.search {
+    width: 30%;
+    border: 1px grey solid;
+    background-color: white;
+    font-size:17px;
+}
+
+/* Tracks */
+
+.track{
+    margin:4% 800px;
+    width: 32%;
+}
+
+.track_titulo{
+    text-align:left;
+    font-size:18px;
+    padding-top:1%;
+    padding-left:5%;
+}
+
+.track_canciones{
+    text-align:left;
+    font-size:20px;
+    padding: 1% 5%;
+    background-color: rgb(228, 203, 174);
+}
+
+.track_canciones li{
+    margin-top: 15px;
+    
+}
+
+/* Carrito */
+
+.carrito{
+    margin:0px 20%;
+}
+
+.carrito_articulo{
+    background-color: rgb(228, 203, 174);
+}
+
+/* Contacto */
+
+.contacto{
+    margin:9.5% 20%;
+}
+
+.contacto p:hover{
+    text-decoration: underline;
+}
+
+/* Login */
+
+.borderlan{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.form-login {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 40px;
+    color: white;
+  }
+  
+  .form-login h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+  }
+  
+  .controls {
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+    background-color:white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .buttons {
+    width: 100%;
+    height: 40px;
+    background: #01415a;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+  }
+  
+  .form-login p{
+    height: 40px;
+    text-align: center;
+  }
+  
+  .form-login a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .form-login a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
