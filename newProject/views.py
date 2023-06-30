@@ -13,3 +13,7 @@ def inicio(request):
 def fleetwood_mac(request):
     context={}
     return render(request,'fleetwood_mac.html',context)
+
+def supertramp_cotc(request):
+    context={}
+    return render(request,'supertramp_cotc.html',context)

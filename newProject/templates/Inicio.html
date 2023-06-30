@@ -26,7 +26,7 @@
     <!-- Inicio de sesión ; Carrito de Compras -->
 
     <div>
-        <a href="Inicio_sesion.html"> <img src="{% static 'img/usuario1.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
+        <a href="Inicio_sesion.html"> <img src="{% static 'img/usuario.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
         <a href="Carrito.html"><img src="{% static 'img/carrito.png' %}" alt="carrito" style="width:55px;float:right;margin:10px 2%" width="40px"></a>
         <div class="position-absolute">
             <a href="Carrito.html"><img src="img/carrito.png" alt="carrito" class="position-absolute top-0 end-0" width="40px"></a>
@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-4 col-12">
-                    <a href="fleetwood_mac.html" class="text-decoration-none">
+                    <a href="{% url 'fleetwood_mac' %}" class="text-decoration-none">
                         <div class="text-center">
                             <figure>
                                 <img class="center-block" src="{% static 'img/Portada/fleetwoodmac.jpg' %}" alt="fleetwoodmac" width="20%">
@@ -54,7 +54,7 @@
                     </a>
                 </div>    
                 <div class="col-sm-4 col-12">
-                    <a href="supertramp_cotc.html" class="text-decoration-none">
+                    <a href="{% url 'supertramp' %}" class="text-decoration-none">
                         <div class="text-center">
                         <figure>
                             <img src="{% static 'img/Portada/supertramp_crime.jpg' %}" alt="supertramp" width="20%" >

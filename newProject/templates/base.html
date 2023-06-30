@@ -13,18 +13,20 @@
 </head>
 <body>
     <!-- Header --> 
-    <style type="header">
+    
+    <style>
         .bg-header {
-        background-image: url('{% static "img/viniles2.png" %}');
-        height: 175px;
+        background: url('{% static "img/viniles2.png" %}');
+        height: 300px;
         background-repeat:no-repeat;
         background-size:cover;
         margin-bottom:3%;
         }
     </style>
+
     <header>
-        <div class="p-5 text-center bg-image bgheader">
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="p-5 text-center bg-image bg-header">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
                 <h1 class="mb-3">Tienda de Vinilos</h1>
@@ -32,23 +34,23 @@
                 <h4 class="mb-3">Discos Usados</h4>
               </div>
             </div>
-          </div>
-          <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a class="text-decoration-none" href="Inicio.html" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
-                        Inicio</a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none" href="Contacto.html" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
-                        Contacto</a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none" href="#" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
-                        Envios</a>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a class="text-decoration-none" href="{% url 'Inicio' %}" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                            Inicio</a>
+                    </div>
+                    <div class="col">
+                        <a class="text-decoration-none" href="Contacto.html" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                            Contacto</a>
+                    </div>
+                    <div class="col">
+                        <a class="text-decoration-none" href="#" style="color: white;font-size:20px;" onMouseover="this.style.color='grey'" onMouseout="this.style.color='white'">
+                            Envios</a>
+                    </div>
                 </div>
             </div>
-        </div>
+          </div>
         </div>
     </header>
 
