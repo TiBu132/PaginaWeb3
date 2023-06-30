@@ -9,3 +9,7 @@ def base(request):
 def inicio(request):
     context={}
     return render(request,'Inicio.html',context)
+
+def fleetwood_mac(request):
+    context={}
+    return render(request,'fleetwood_mac.html',context)
