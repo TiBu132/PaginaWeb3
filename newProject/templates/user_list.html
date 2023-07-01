@@ -15,11 +15,9 @@
     <h1>Editar datos de Alumnos</h1>
     <br>
 
-    <div>
         <button type="button" style="margin-left:2%;border-radius:5px;">
-            <a href="{% url 'addForm' %}"> Agregar </a>
+            <a href="{% url 'user_add' %}"> Agregar </a>
         </button>    
-    </div>
     
     <br>
 
@@ -42,8 +40,8 @@
                         <td> {{ x.rut}} </td>
                         <td> {{ x.nombre}} {{ x.apaterno}} {{ x.amaterno}} </td>
                         <td> {{ x.correo}} </td>
-                        <td> <a href="{% url 'userDel' pk=x.rut %}"> Eliminar </a> </td>   
-                        <td> <a href="{% url 'userEdit' pk=x.rut %}"></a> Modificar </td>  
+                        <td> <a href="{% url 'user_del' pk=x.rut %}"> Eliminar </a> </td>   
+                        <td> <a href="{% url 'user_edit' pk=x.rut %}"></a> Modificar </td>  
                     </tr>
                 {% endfor %}
             {% endif %}

@@ -14,7 +14,7 @@ class Usuario(models.Model):
     apaterno = models.CharField(max_length=60,verbose_name='Apellido Paterno', blank=False, null=False)
     amaterno = models.CharField(max_length=60, verbose_name='Apellido Materno')
     fechaNac = models.DateField(blank=False,verbose_name='Fecha de Nacimiento', null=False)
-    tipoUsuario = models.ForeignKey('tipoUsuario',verbose_name='Tipo de Usuario', on_delete=models.CASCADE, db_column='idTipo')
+    tipoUsuario = models.ForeignKey(tipoUsuario,verbose_name='Tipo de Usuario', on_delete=models.CASCADE, db_column='idTipo')
     correo = models.EmailField(unique=True, max_length=100, blank=False, null=False)
     telefono = models.CharField(max_length=10, blank=False, null=False)
 

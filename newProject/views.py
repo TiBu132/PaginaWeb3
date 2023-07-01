@@ -35,13 +35,7 @@ def crud(request):
     context={"usuarios":usuarios}
     return render(request, 'user_list.html', context)
 
-def crudTipo(request):
-    tipos = tipoUsuario.objects.all()
-    context = {"tipo": tipos}
-    return render(request, "pages/tipo_list.html", context)
-
-
-def userAdd(request):
+def user_add(request):
     if request.method != "POST":
         tipo = tipoUsuario.objects.all()
         context = {"tipo": tipo}
@@ -66,14 +60,13 @@ def userAdd(request):
             tipoUsuario=objTipo,
             correo=correo,
             telefono=telefono,
-            activo=1,
         )
         objUsuario.save()
         context = {"mensaje": "OK Registrado Correctamente"}
-        return render(request, "Usuario_add.html", context)
+        return render(request, "user_add.html", context)
 
 
-def userDel(request, pk):
+def user_del(request, pk):
     context = {}
     try:
         user = Usuario.objects.get(rut=pk)
@@ -81,13 +74,13 @@ def userDel(request, pk):
         user.delete()
         usuarios = Usuario.objects.all()
         context = {"mensaje": "OK Registro eliminado", "usuario": usuarios}
-        return render(request, "pages/user_list.html", context)
+        return render(request, "user_list.html", context)
     except:
         usuarios = Usuario.objects.all()
         context = {"mensaje": "Error, Rut no encontrado...", "usuario": usuarios}
-        return render(request, "pages/user_list.html", context)
+        return render(request, "user_list.html", context)
     
-def userEdit(request, pk):
+def user_edit(request, pk):
     if pk != "":
         user = Usuario.objects.get(rut=pk)
         tipo = tipoUsuario.objects.all()
@@ -97,8 +90,7 @@ def userEdit(request, pk):
         context = {"mensaje": "Error, usuario no encontrado"}
         return render(request, "user_list", context)
 
-def addForm(request):
+def add_form(request):
     form = UsuarioForm()
     context = {"form": form}
-    return render(request, "addForm.html", context)
-
+    return render(request, "add_form.html", context)
