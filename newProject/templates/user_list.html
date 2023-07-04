@@ -12,40 +12,55 @@
 </head>
 <body>
     
-    <h1>Editar datos de Alumnos</h1>
-    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 p-5 mt-3 mx-auto text-center table-responsive">
 
-        <button type="button" style="margin-left:2%;border-radius:5px;">
-            <a href="{% url 'user_add' %}"> Agregar </a>
-        </button>    
-    
-    <br>
+                <h1>Lista de Usuarios</h1><br>
+                {% if request.session.nombreUsuario%}
+                <div class='h2 fw-bold mb-3'>
+                    Bienvenido {{request.session.nombreUsuario}} <br>
+                </div>
+                {% endif%}
+                <a href="{% url 'userAdd' %}">
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </a>
+                <a href="{% url 'crudTipo' %}">
+                    <button type="button" class="btn btn-primary">Ver Tipos de Usuario</button>
+                </a>
+                <a href="{% url 'logout' %}">
+                    <button type="button" class="btn btn-danger">Desconectar</button>
+                </a>
+                <div id="idMensajes">
+                    {% if mensaje %}
+                    {{mensaje}}
+                    {% endif%}
+                </div>
 
-    <div id="idMensajes">
-        {% if mensaje %}
-            {{mensaje}}
-        {% endif %}
+                <table class="table table-dark table-striped mt-3">
+                    {% if usuario %}
+                    <thead>
+                        <th>Rut</th>
+                        <th>Nombre Completo</th>
+                        <th>Correo</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </thead>
+                    <tbody>
+                        {% for user in usuario %}
+                        <tr>
+                            <td>{{user.rut}}</td>
+                            <td>{{user.nombre}} {{user.appPaterno}} {{user.appMaterno}}</td>
+                            <td>{{user.correo}}</td>
+                            <td><a href="{% url 'userEdit' pk=user.rut%}">Modificar</a></td>
+                            <td><a href="{% url 'userDel' pk=user.rut%}">Eliminar</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    {% endif %}
+                </table>
+            </div>
+        </div>
     </div>
-
-        <table>
-            {% if usuarios %}
-                <th>Rut</th>
-                <th>Nombre Completo</th>
-                <th>Correo</th>
-                <th>Eliminar</th>
-                <th>Modificar</th>
-
-                {% for x in usuarios%}
-                    <tr>
-                        <td> {{ x.rut}} </td>
-                        <td> {{ x.nombre}} {{ x.apaterno}} {{ x.amaterno}} </td>
-                        <td> {{ x.correo}} </td>
-                        <td> <a href="{% url 'user_del' pk=x.rut %}"> Eliminar </a> </td>   
-                        <td> <a href="{% url 'user_edit' pk=x.rut %}"></a> Modificar </td>  
-                    </tr>
-                {% endfor %}
-            {% endif %}
-        </table>
-    
 </body>
 </html>

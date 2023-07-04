@@ -5,6 +5,7 @@ class UsuarioForm(ModelForm):
     class Meta:
         model = Usuario
         fields = "__all__"
+        
 
 class tipoForm(ModelForm):
     class Meta:
