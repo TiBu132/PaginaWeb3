@@ -27,20 +27,12 @@ class Usuario(models.Model):
     
     
 class Vinilo(models.Model):
-    idVinilo = models.AutoField(primary_key=True, db_column='idVinilo', verbose_name='Id_Vinilo')
+    idVinilo = models.IntegerField(primary_key=True, db_column='idVinilo', verbose_name='Id_Vinilo')
     nombreArt = models.CharField(max_length=50, blank=False, null=False)
     nombreDisco = models.CharField(max_length=80, blank=False, null=False)
     valorDisco = models.IntegerField()
     stock = models.IntegerField()
 
-class descVinilo(models.Model):
-    sello = models.CharField(max_length=60, blank=False, null=False)
-    anno_lto = models.DateField(blank=False, null=False)
-    pais = models.CharField(max_length=40, blank=False, null=False)
-    genero = models.CharField(max_length=100, blank=False, null=False)
-    idVinilo = models.ForeignKey(Vinilo, on_delete=models.CASCADE, db_column='idVinilo')
+    def __str__(self):
+        return f'{self.nombreArt} -> {self.nombreDisco} -> {self.valorDisco}'
 
-class tracksVinilo(models.Model):
-    numTrack = models.IntegerField(db_column='numTrack', verbose_name='Numero_Track')
-    nombreTrack = models.CharField(max_length=60, blank=False, null=False)
-    idVinilo = models.ForeignKey(Vinilo, on_delete=models.CASCADE, db_column='idVinilo')

@@ -16,9 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from newProject.views import viniloAdd, viniloDel, viniloRestar, carritoLimpiar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('newProject.urls'))
-
+    path('', include('newProject.urls')),
+    path("agregar/ <int:Vinilo_id>", viniloAdd , name="Add"),
+    path('eliminar/<int:Vinilo_id>/', viniloDel , name="Del"),
+    path('restar/<int:Vinilo_id>/', viniloRestar , name="Sub"),
+    path('limpiar/', carritoLimpiar , name="Cls"),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]

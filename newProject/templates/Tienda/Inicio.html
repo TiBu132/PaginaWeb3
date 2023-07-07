@@ -27,7 +27,7 @@
     <!-- Inicio de sesión ; Carrito de Compras -->
 
     <div>
-        <a href="{% url 'Inicio_sesion' %}"> <img src="{% static 'img/usuario.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
+        <a href="{% url 'login' %}"> <img src="{% static 'img/usuario.png' %}" alt="foto usuario" width="50px" style="float:right;margin-top:10px;margin-right: 4%"></a>
         <a href="{% url 'Carrito' %}"><img src="{% static 'img/carrito.png' %}" alt="carrito" style="width:55px;float:right;margin:10px 2%" width="40px"></a>
         <div class="position-absolute">
             <a href="{% url 'Carrito' %}"><img src="{% static 'img/carrito.png' %}" alt="carrito" class="position-absolute top-0 end-0" width="40px"></a>
@@ -36,7 +36,32 @@
 
     <!-- Contenido Vinilos -->
 
-        <div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="row" style="padding: 10px 0;">
+                    <div class="col-12">
+                        <div class="row">
+                            {% for vinilo in vinilos %}
+                            <div class="col-6">
+                                <div class="card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{vinilo.nombreArt}}</h5>
+                                        <p class="card-text">{{vinilo.nombreDisco}}</p>
+                                        <p class="card-text">{{vinilo.valorDisco}}</p>
+                                        <a href="{% url 'Add' 1 %}" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!--    <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-4 col-12">
                     <a href="{% url 'fleetwood_mac' %}" class="text-decoration-none">
@@ -161,7 +186,7 @@
             </div>
         </div> 
         <br> <br>
-
+-->
         {% endblock%}
 </body>
 </html>

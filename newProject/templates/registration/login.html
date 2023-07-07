@@ -1,0 +1,54 @@
+{%extends 'Tienda/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+    {% load static %}
+    {% bootstrap_css%}
+    {% bootstrap_javascript%}
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <title>Document</title>
+</head>
+{% block body%}
+<body style="background-color:bisque">
+    
+
+     <style>
+        .form-login {
+            background-image: url('{% static "img/otrovin.jpg" %}');
+            background-size: cover;
+        }
+    </style>
+
+    <!-- Login -->
+
+    <div class="login">
+        <div class='borderlan'>
+            <section class="form-login">
+                <h5>Iniciar Sesion</h5>
+
+                <form action="" method='POST'>
+                    {% csrf_token %}
+                    <label for="username" class='form-label'>Nombre Usuario</label>
+                    <input type="text" class='controls' name='username' id='username' autocomplete="on" placeholder='Ingrese su usuario'><br>
+                    <label for="password" class='form-label'>Contraseña</label>
+                    <input type="password" class='controls' name='password' id='password' autocomplete="on" placeholder='Contraseña'><br>
+                    <input class="buttons" type="submit" value="Ingresar">
+
+                    <p><a href="#">¿No tienes cuenta?, Registrate</a></p>
+                    <p><a href="#">¿Olvidaste tu Contraseña?</a></p> 
+                    <hr style="color:white">
+                </form>
+                {% if mensaje%}
+                {{mensaje}}
+                {% endif%}
+                
+            </section> 
+        </div>
+    </div>
+    <br><br><br>
+   {% endblock %}
+</body>
+</html>
