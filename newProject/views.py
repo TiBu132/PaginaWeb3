@@ -1,6 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Usuario, tipoUsuario, Vinilo
-from .forms import UsuarioForm, tipoForm
+from .models import Vinilo
 from .Carrito import Carrito
 from django.contrib.auth.decorators import login_required
 
